@@ -12,4 +12,7 @@ declare global {
 
   export type { TupleToObject } from './src/00011-easy-tuple-to-object'
   import('./src/00011-easy-tuple-to-object')
+
+  export type { First } from './src/00014-easy-first'
+  import('./src/00014-easy-first')
 }
