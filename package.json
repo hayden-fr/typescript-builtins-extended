@@ -1,0 +1,32 @@
+{
+  "name": "typescript-builtins-extended",
+  "version": "0.0.1",
+  "description": "Collection of TypeScript Utility Types.",
+  "scripts": {
+    "test": "tsc --noEmit"
+  },
+  "keywords": [
+    "typescript",
+    "utilities",
+    "Utility",
+    "types"
+  ],
+  "bugs": {
+    "url": "https://github.com/hayden-fr/typescript-builtins-extended/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hayden-fr/typescript-builtins-extended.git"
+  },
+  "files": [
+    "src",
+    "index.d.ts",
+    "tsconfig.json"
+  ],
+  "types": "index.d.ts",
+  "author": "hayden <hayden.mike.zhang@gmail.com>",
+  "packageManager": "pnpm@10.15.1",
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  }
+}
