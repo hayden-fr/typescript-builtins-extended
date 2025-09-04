@@ -9,4 +9,7 @@ declare global {
 
   export type { TupleToUnion } from './src/00010-medium-tuple-to-union'
   import('./src/00010-medium-tuple-to-union')
+
+  export type { TupleToObject } from './src/00011-easy-tuple-to-object'
+  import('./src/00011-easy-tuple-to-object')
 }
