@@ -6,4 +6,7 @@ declare global {
 
   export type { DeepReadonly } from './src/00009-medium-deep-readonly'
   import('./src/00009-medium-deep-readonly')
+
+  export type { TupleToUnion } from './src/00010-medium-tuple-to-union'
+  import('./src/00010-medium-tuple-to-union')
 }
