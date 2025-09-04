@@ -21,4 +21,7 @@ declare global {
 
   export type { Pop } from './src/00016-medium-pop'
   import('./src/00016-medium-pop')
+
+  export type { UnionToTuple } from './src/00730-hard-union-to-tuple'
+  import('./src/00730-hard-union-to-tuple')
 }
