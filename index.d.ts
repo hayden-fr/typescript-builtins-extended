@@ -15,4 +15,7 @@ declare global {
 
   export type { First } from './src/00014-easy-first'
   import('./src/00014-easy-first')
+
+  export type { Last } from './src/00015-medium-last'
+  import('./src/00015-medium-last')
 }
