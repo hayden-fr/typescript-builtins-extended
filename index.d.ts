@@ -24,4 +24,7 @@ declare global {
 
   export type { UnionToTuple } from './src/00730-hard-union-to-tuple'
   import('./src/00730-hard-union-to-tuple')
+
+  export type { IsPlainObject } from './src/is-plain-object'
+  import('./src/is-plain-object')
 }
