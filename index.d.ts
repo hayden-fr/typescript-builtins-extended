@@ -33,4 +33,7 @@ declare global {
 
   export type { IsPlainObject } from './src/is-plain-object'
   import('./src/is-plain-object')
+
+  export type { FlattenIntersection } from './src/utilities'
+  import('./src/utilities')
 }

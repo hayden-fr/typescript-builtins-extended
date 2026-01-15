@@ -1,5 +1,6 @@
 // ============= Test Cases =============
 import type { Equal, Expect } from './test-utils'
+import { FlattenIntersection } from './utilities'
 
 interface User {
   name?: string
@@ -28,7 +29,6 @@ type cases = [
 ]
 
 // ============= Your Code Here =============
-type Merge<T> = { [P in keyof T]: T[P] }
-export type RequiredByKeys<T, K extends keyof T = keyof T> = Merge<
+export type RequiredByKeys<T, K extends keyof T = keyof T> = FlattenIntersection<
   Omit<T, K> & { [P in K]-?: T[P] }
 >
