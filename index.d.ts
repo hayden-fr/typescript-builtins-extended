@@ -31,9 +31,6 @@ declare global {
   export type { RequiredByKeys } from './src/02759-medium-requiredbykeys'
   import('./src/02759-medium-requiredbykeys')
 
-  export type { IsPlainObject } from './src/is-plain-object'
-  import('./src/is-plain-object')
-
   export type { FlattenIntersection } from './src/utilities'
   import('./src/utilities')
 }
