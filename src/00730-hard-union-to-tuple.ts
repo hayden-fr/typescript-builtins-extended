@@ -3,6 +3,7 @@ import type { Equal, Expect } from './test-utils'
 
 type ExtractValuesOfTuple<T extends any[]> = T[keyof T & number]
 
+// prettier-ignore
 type cases = [
   Expect<Equal<UnionToTuple<'a' | 'b'>['length'], 2>>,
   Expect<Equal<ExtractValuesOfTuple<UnionToTuple<'a' | 'b'>>, 'a' | 'b'>>,
@@ -17,36 +18,23 @@ type cases = [
   Expect<Equal<ExtractValuesOfTuple<UnionToTuple<'a' | 'b' | 'c' | 1 | 2 | 'd' | 'e' | 'f' | 'g'>>, 'f' | 'e' | 1 | 2 | 'g' | 'c' | 'd' | 'a' | 'b'>>,
 ]
 
-
 // ============= Your Code Here =============
-// Implemented by https://github.com/type-challenges/type-challenges/issues/737
 
 /**
+ * 联合类型转交叉类型
+ *
  * UnionToIntersection<{ foo: string } | { bar: string }> =
  *  { foo: string } & { bar: string }.
  */
-type UnionToIntersection<U> = (
-  U extends unknown ? (arg: U) => 0 : never
-) extends (arg: infer I) => 0
-  ? I
-  : never;
-
+export type UnionToIntersection<U> = (U extends unknown ? (arg: U) => 0 : never) extends (arg: infer I) => 0 ? I : never
 /**
  * LastInUnion<1 | 2> = 2.
  */
-type LastInUnion<U> = UnionToIntersection<
-  U extends unknown ? (x: U) => 0 : never
-> extends (x: infer L) => 0
-  ? L
-  : never;
+type LastInUnion<U> = UnionToIntersection<U extends unknown ? (x: U) => 0 : never> extends (x: infer L) => 0 ? L : never
 
 /**
- * Implement a type, UnionToTuple, that converts a union to a tuple.
- *
- * 将联合转换为元组的类型。
- *
- * UnionToTuple<1 | 2> = [1, 2].
+ * 将联合转换为元组。
  */
 export type UnionToTuple<U, Last = LastInUnion<U>> = [U] extends [never]
   ? []
-  : [...UnionToTuple<Exclude<U, Last>>, Last];
+  : [...UnionToTuple<Exclude<U, Last>>, Last]

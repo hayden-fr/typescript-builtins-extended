@@ -1,6 +1,7 @@
 // ============= Test Cases =============
 import type { Equal, Expect } from './test-utils'
 
+// prettier-ignore
 type cases = [
   Expect<Equal<DeepReadonly<X1>, Expected1>>,
   Expect<Equal<DeepReadonly<X2>, Expected2>>,
@@ -57,12 +58,8 @@ type Expected1 = {
 type Expected2 = { readonly a: string } | { readonly b: number }
 
 // ============= Your Code Here =============
-// Implemented by https://github.com/type-challenges/type-challenges/issues/13716
-
 /**
- * Implement a generic `DeepReadonly<T>` which make every parameter of an object - and its sub-objects recursively - readonly.
- *
- * 实现一个泛型 `DeepReadonly<T>`，它将对象的每个参数及其子对象递归地设为只读。
+ * 将对象的每个参数及其子对象递归地设为只读。
  */
 export type DeepReadonly<T> = {
   readonly [P in keyof T]: keyof T[P] extends never ? T[P] : DeepReadonly<T[P]>

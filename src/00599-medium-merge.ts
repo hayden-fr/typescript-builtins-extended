@@ -10,6 +10,7 @@ type Bar = {
   c: boolean
 }
 
+// prettier-ignore
 type cases = [
   Expect<
     Equal<
@@ -25,9 +26,5 @@ type cases = [
 
 // ============= Your Code Here =============
 export type Merge<F, S> = {
-  [K in keyof F | keyof S]: K extends keyof S
-  ? S[K]
-  : K extends keyof F
-  ? F[K]
-  : never
+  [K in keyof F | keyof S]: K extends keyof S ? S[K] : K extends keyof F ? F[K] : never
 }

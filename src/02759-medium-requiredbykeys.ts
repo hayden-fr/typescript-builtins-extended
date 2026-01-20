@@ -20,6 +20,7 @@ interface UserRequiredNameAndAge {
   address?: string
 }
 
+// prettier-ignore
 type cases = [
   Expect<Equal<RequiredByKeys<User, 'name'>, UserRequiredName>>,
   Expect<Equal<RequiredByKeys<User, 'name' | 'age'>, UserRequiredNameAndAge>>,
@@ -29,6 +30,4 @@ type cases = [
 ]
 
 // ============= Your Code Here =============
-export type RequiredByKeys<T, K extends keyof T = keyof T> = FlattenIntersection<
-  Omit<T, K> & { [P in K]-?: T[P] }
->
+export type RequiredByKeys<T, K extends keyof T = keyof T> = FlattenIntersection<Omit<T, K> & { [P in K]-?: T[P] }>
