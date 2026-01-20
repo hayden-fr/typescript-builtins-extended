@@ -1,4 +1,4 @@
-export { }
+export {}
 
 declare global {
   export type { GetReadonlyKeys } from './src/00005-extreme-readonly-keys'
@@ -21,6 +21,9 @@ declare global {
 
   export type { Pop } from './src/00016-medium-pop'
   import('./src/00016-medium-pop')
+
+  export type { Get } from './src/00270-hard-typed-get'
+  import('./src/00270-hard-typed-get')
 
   export type { Merge } from './src/00599-medium-merge'
   import('./src/00599-medium-merge')
