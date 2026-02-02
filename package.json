@@ -1,6 +1,6 @@
 {
   "name": "typescript-builtins-extended",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Collection of TypeScript Utility Types.",
   "scripts": {
     "build": "pnpm run build:dts && pnpm run build:global-dts && pnpm run build:format",
