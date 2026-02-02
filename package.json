@@ -3,6 +3,10 @@
   "version": "0.0.1",
   "description": "Collection of TypeScript Utility Types.",
   "scripts": {
+    "build": "pnpm run build:dts && pnpm run build:global-dts && pnpm run build:format",
+    "build:dts": "pnpx dts-bundle-generator --config ./build.json",
+    "build:global-dts": "node scripts/generate-global-dts.mjs",
+    "build:format": "pnpx prettier --write index.d.ts global.d.ts",
     "test": "tsc --noEmit"
   },
   "keywords": [
@@ -19,13 +23,21 @@
     "url": "https://github.com/hayden-fr/typescript-builtins-extended.git"
   },
   "files": [
-    "src",
     "index.d.ts",
+    "global.d.ts",
     "tsconfig.json"
   ],
   "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts"
+    },
+    "./global": {
+      "types": "./global.d.ts"
+    }
+  },
   "author": "hayden <hayden.mike.zhang@gmail.com>",
-  "packageManager": "pnpm@10.15.1",
+  "packageManager": "pnpm@10.28.1",
   "devDependencies": {
     "typescript": "^5.9.2"
   }

@@ -1,15 +1,31 @@
 # Typescript Utilities
 
-English | [简体中文](README.zh-CN.md)
+[English](README.en.md) | 简体中文
 
-Provides a globally-scoped type conversion tool for typescript. Unlike other tools, `typescript-builtins-extended` does not provide any js code and focuses on typescript type conversion. And it can be used directly like using built-in utility types such as `Omit` `Pick` without additional import.
+`typescript-builtins-extended` 不提供任何 js 代码，专注于 typescript 的类型推导。
 
-Utility types and implementation methods come from [type-challenges](https://github.com/type-challenges/type-challenges.git)
+## 使用方式
 
-## Usage
+有两种使用方式，模块引入和全局引入。
 
-Add the following code to the `d.ts` declaration file
+### 模块引入
 
-```ts
-/// <reference types="typescript-builtins-extended" />
+```typescript
+import type { Prettify } from 'typescript-builtins-extended'
+
+type A = Prettify<{ a: number } & { b: string }>
+```
+
+### 全局引入
+
+将下面的代码添加到全局声明文件中，例如 `global.d.ts`。
+
+```typescript
+/// <reference types="typescript-builtins-extended/global" />
+```
+
+然后就可以像使用内置实用程序类型一样使用 `typescript-builtins-extended` 了。
+
+```typescript
+type A = Prettify<{ a: number } & { b: string }>
 ```
