@@ -6,7 +6,7 @@
     "build": "pnpm run build:dts && pnpm run build:global-dts && pnpm run build:format",
     "build:dts": "pnpx dts-bundle-generator --config ./build.json",
     "build:global-dts": "node scripts/generate-global-dts.mjs",
-    "build:format": "pnpx prettier --write index.d.ts global.d.ts",
+    "build:format": "pnpx prettier --ignore-path --write index.d.ts global.d.ts",
     "test": "tsc --noEmit"
   },
   "keywords": [
