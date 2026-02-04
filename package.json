@@ -23,6 +23,7 @@
     "url": "https://github.com/hayden-fr/typescript-builtins-extended.git"
   },
   "files": [
+    "LICENSE",
     "index.d.ts",
     "global.d.ts",
     "tsconfig.json"
