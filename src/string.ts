@@ -1,4 +1,4 @@
-type Whitespace = ' ' | '\n' | '\t'
+import type { Whitespace } from './common'
 
 /**
  * 从字符串中移除前面的 空格 或 指定的字符
