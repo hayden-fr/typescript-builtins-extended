@@ -1,6 +1,6 @@
 {
   "name": "typescript-builtins-extended",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Collection of TypeScript Utility Types.",
   "scripts": {
     "build": "pnpm run build:dts && pnpm run build:global-dts && pnpm run build:format",
@@ -16,11 +16,11 @@
     "types"
   ],
   "bugs": {
-    "url": "https://github.com/hayden-fr/typescript-builtins-extended/issues"
+    "url": "https://github.com/hayden-cn/typescript-builtins-extended/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hayden-fr/typescript-builtins-extended.git"
+    "url": "https://github.com/hayden-cn/typescript-builtins-extended.git"
   },
   "files": [
     "LICENSE",
